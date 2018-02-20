@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Keypad</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" type="text/css" href="css/Assgn1.css">
+
+</head>
+<body>
+<script src="js/Assgn1.js"></script>
+<div style="width:600px;border:1px solid Black;>
+    <form name="userForm" AUTOCOMPLETE="OFF">
+<p class="_heading">Personal Banking</p><br>
+<p id="desc">To access your account please fill in the details and click login</p>
+<table>
+    <tr>
+        <td class="_formVal">Customer ID</td>
+        <td><input type="text" name="calcvalues" id="calcfield" value="" size="17" required></td>
+    </tr>
+    <tr>
+        <td class="_formVal">Password</td>
+        <td><input type="text" name="calcvalues1" id="calcfield1" value="" size="17" onkeydown="myFunction()" required></td>
+        <td><input type="button" name="number1" value="Click Here" id="ch" onclick="ch()"> to use <br>Virtual Keyboard</td>
+    </tr>
+    <tr>
+        <td class="_formVal">Start In</td>
+        <td><fieldset>
+
+            <p>
+
+                <select >
+                    <option value = "1">Home Page</option>
+                    <option value = "2">Admin Page</option>
+
+                </select>
+            </p>
+        </fieldset></td>
+    </tr>
+    <tr>
+        <td><input type="button" name="login" value="Login"></td>
+    </tr>
+
+
+
+</table>
+<div id="help">
+<a href="#">Generate Online Password</a> /<br/>
+<a href="#">Forgot Password </a>/<br/>
+<a href="#">Modify Transaction Limit</a><br/>
+</div>
+</form>
+
+</div>
+<table>
+    <tr>
+        <td>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/>
+                Lorem Ipsum has been the industry's standard dummy text ever since <br/>
+                when an unknown printer took a galley of type and scrambled it to <br>
+                It has survived not only five centuries, but also the leap into electronic </p>
+        </td>
+        <td><img src="icon.png" width=100 px></td>
+    </tr>
+</table>
+<div>
+
+</div>
+<form name="CalcForm" onsubmit="getValue()" AUTOCOMPLETE="OFF">
+
+    <div id="keypad" style="width:600px;height:300px;border:1px solid Black;float:right">
+        <div id="row0">
+            <p class="_heading">Virtual Keyboard (Only for Password)</p>
+            <input type="button" name="number" value="clear|X" id="_00" class="btns" align="right">
+        </div>
+        <div id="row1">
+            <input type="button" name="number" value="+" id="_1" class="btns">
+            <input type="button" name="number" value="-" id="_2" class="btns">
+            <input type="button" name="number" value="~" id="_3" class="btns">
+            <input type="button" name="number" value="*" id="_4" class="btns">
+            <input type="button" name="number" value="," id="_5" class="btns">
+            <input type="button" name="number" value="\" id="_6" class="btns">
+            <input type="button" name="number" value="`" id="_7" class="btns">
+            <input type="button" name="number" value=">" id="_8" class="btns">
+            <input type="button" name="number" value="." id="_9" class="btns">
+            <input type="button" name="number" value="}" id="_10" class="btns">
+            <input type="button" name="number" value="]" id="_11" class="btns">
+            <input type="button" name="number" value="=" id="_12" class="btns">
+            <input type="button" name="number" value="|" id="_13" class="btns">
+            <input type="button" name="number" value="<" id="_14" class="btns">
+            <input type="button" name="number" value="[" id="_15" class="btns">
+        </div>
+        <div id="row2">
+            <input type="button" name="number" value="!" id="_16" class="btns">
+            <input type="button" name="number" value="$" id="_17" class="btns">
+            <input type="button" name="number" value=")" id="_18" class="btns">
+            <input type="button" name="number" value="^" id="_19" class="btns">
+            <input type="button" name="number" value=";" id="_20" class="btns">
+            <input type="button" name="number" value="?" id="_21" class="btns">
+            <input type="button" name="number" value=":" id="_22" class="btns">
+            <input type="button" name="number" value="(" id="_23" class="btns">
+            <input type="button" name="number" value="#" id="_24" class="btns">
+            <input type="button" name="number" value="%" id="_25" class="btns">
+            <input type="button" name="number" value="/" id="_26" class="btns">
+            <input type="button" name="number" value="_" id="_27" class="btns">
+            <input type="button" name="number" value="*" id="_28" class="btns">
+            <input type="button" name="number" value="" id="_29" class="btns">
+            <input type="button" name="number" value="@" id="_30" class="btns">
+        </div>
+        <div id="row3">
+            <input type="button" name="number" value="e" id="_e" class="btns">
+            <input type="button" name="number" value="u" id="_u" class="btns">
+            <input type="button" name="number" value="i" id="_i" class="btns">
+            <input type="button" name="number" value="p" id="_p" class="btns">
+            <input type="button" name="number" value="t" id="_t" class="btns">
+            <input type="button" name="number" value="y" id="_y" class="btns">
+            <input type="button" name="number" value="o" id="_o" class="btns">
+            <input type="button" name="number" value="q" id="_q" class="btns">
+            <input type="button" name="number" value="w" id="_w" class="btns">
+            <input type="button" name="number" value="r" id="_r" class="btns">
+            <input type="button" name="number" value="7" id="_n7" class="btns">
+            <input type="button" name="number" value="2" id="_n2" class="btns">
+            <input type="button" name="number" value="4" id="_n4" class="btns">
+        </div>
+        <div id="row4">
+            &nbsp;&nbsp;&nbsp;
+            <input type="button" name="number" value="d" id="_d" class="btns">
+            <input type="button" name="number" value="j" id="_j" class="btns">
+            <input type="button" name="number" value="k" id="_k" class="btns">
+            <input type="button" name="number" value="g" id="_g" class="btns">
+            <input type="button" name="number" value="l" id="_l" class="btns">
+            <input type="button" name="number" value="f" id="_f" class="btns">
+            <input type="button" name="number" value="h" id="_h" class="btns">
+            <input type="button" name="number" value="a" id="_a" class="btns">
+            <input type="button" name="number" value="s" id="_s" class="btns">
+            <input type="button" name="number" value="5" id="_n5" class="btns">
+            <input type="button" name="number" value="0" id="_n0" class="btns">
+            <input type="button" name="number" value="9" id="_n9" class="btns">
+
+        </div>
+        <div id="row5">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" name="number" value="m" id="_m" class="btns">
+            <input type="button" name="number" value="v" id="_v" class="btns">
+            <input type="button" name="number" value="z" id="_z" class="btns">
+            <input type="button" name="number" value="b" id="_b" class="btns">
+            <input type="button" name="number" value="c" id="_c" class="btns">
+            <input type="button" name="number" value="n" id="_n" class="btns">
+            <input type="button" name="number" value="x" id="_x" class="btns">
+            <input type="button" name="number" value="3" id="_n3" class="btns">
+            <input type="button" name="number" value="6" id="_n6" class="btns">
+            <input type="button" name="number" value="1" id="_n1" class="btns">
+
+        </div>
+        <div id="row6">
+            <input type="button" name="number" value="Caps" id="_caps" class="btns">
+            <input type="button" name="number" value="Bksp" id="_back" class="btns">
+            <input type="button" name="number" value="8" id="_n8" class="btns">
+
+        </div>
+    </div>
+</form>
+</body>
+</html>
