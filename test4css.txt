@@ -21,7 +21,87 @@
 
     <script type="text/javascript">
         onload=function(){ attachHandlers(); }
-        function attachHandlers(){
+        function attachHandlers(){.btns {
+    background-color: white; /* Green */
+    border: solid;
+    color: #4CAF50;
+    padding: 2px 0.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 30px;
+    margin-left: 3px;
+    margin-bottom: 2px;
+}
+#_00{
+    position: relative;
+    left: 450px;
+    top:-40px;
+    width:60px;
+}
+#_n7,#_n2,#_n4{
+    position: relative;
+    left: 74px;
+}
+#_n5,#_n0,#_n9{
+    position: relative;
+    left: 95px;
+}
+#_n3,#_n6,#_n1{
+    position: relative;
+    left:157px;
+}
+#_n8{
+    position: relative;
+    left:347px;
+}
+
+#_back,#_caps{
+    width: 60px;
+    position: relative;
+    left:65px;
+}
+.keypad{
+    position: relative;
+    left:65px;
+}
+._heading{
+    text-align: center;
+    font-weight: bold;
+    color:red;
+}
+#desc{
+    text-align: center;
+    top:-40px;
+
+}
+._formVal{
+
+    font-weight: bold;
+    color:darkgreen;
+}
+fieldset {
+    border: 0;
+}
+#help{
+    text-align: center;
+}
+#keypad{
+    display: none;
+}
+#ch {
+    background-color: white; /* Green */
+    border: none;
+    color: red;
+
+
+    display: inline-block;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
             var the_nums = document.getElementsByName("number");
             for (var i=0; i < the_nums.length; i++) {
                 the_nums[i].onclick=inputNumbers; }
