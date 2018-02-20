@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Keypad</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+        .btns {
+            background-color: white; /* Green */
+            border: solid;
+            color: #4CAF50;
+            padding: 2px 0.5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            width: 30px;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        onload=function(){ attachHandlers(); }
+        function attachHandlers(){.btns {
+    background-color: white; /* Green */
+    border: solid;
+    color: #4CAF50;
+    padding: 2px 0.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 30px;
+    margin-left: 3px;
+    margin-bottom: 2px;
+}
+#_00{
+    position: relative;
+    left: 450px;
+    top:-40px;
+    width:60px;
+}
+#_n7,#_n2,#_n4{
+    position: relative;
+    left: 74px;
+}
+#_n5,#_n0,#_n9{
+    position: relative;
+    left: 95px;
+}
+#_n3,#_n6,#_n1{
+    position: relative;
+    left:157px;
+}
+#_n8{
+    position: relative;
+    left:347px;
+}
+
+#_back,#_caps{
+    width: 60px;
+    position: relative;
+    left:65px;
+}
+.keypad{
+    position: relative;
+    left:65px;
+}
+._heading{
+    text-align: center;
+    font-weight: bold;
+    color:red;
+}
+#desc{
+    text-align: center;
+    top:-40px;
+
+}
+._formVal{
+
+    font-weight: bold;
+    color:darkgreen;
+}
+fieldset {
+    border: 0;
+}
+#help{
+    text-align: center;
+}
+#keypad{
+    display: none;
+}
+#ch {
+    background-color: white; /* Green */
+    border: none;
+    color: red;
+
+
+    display: inline-block;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+            var the_nums = document.getElementsByName("number");
+            for (var i=0; i < the_nums.length; i++) {
+                the_nums[i].onclick=inputNumbers; }
+        }
+        function inputNumbers() {
+            var the_field = document.getElementById('calcfield');
+            var the_value = this.value;
+            var caps_on=false;
+            switch (the_value) {
+
+                case 'back':
+
+                    var value = document.getElementById("calcfield1").value;
+                    document.getElementById("calcfield1").value = value.substr(0, value.length - 1);
+                break;
+                case 'caps':
+                    var value = document.getElementById("_4").value;
+                    if(value!='A') {
+                        document.getElementById('_4').value = 'A';
+                       }else{
+                        document.getElementById('_4').value = 'a';
+                    }
+                    break;
+                case 'clear':
+
+                    var value = document.getElementById("calcfield1").value;
+                    document.getElementById("calcfield1").value = value.substr(0,0);
+                    break;
+                default : document.getElementById("calcfield1").value += the_value;
+                    break;
+            }
+            document.getElementById('calcfield1').focus();
+            return true;
+        }
+        function getValue() {
+            document.getElementById('calcfield').focus();
+            return false;
+        }
+
+        function myFunction()
+        {
+            document.onkeydown = function ()
+            {
+                return false;
+            }
+        }
+        function back() {
+            var value = document.getElementById("calcfield1").value;
+            document.getElementById("calcfield1").value = value.substr(0, value.length - 1);
+        }
+
+
+    </script>
+</head>
+<body>
+<div>
+    <input type="text" name="calcvalues" id="calcfield" value="" size="17">
+</div>
+<div>
+    <input type="text" name="calcvalues" id="calcfield1" value="" size="17" onkeydown="myFunction()">
+</div>
+<form name="CalcForm" onsubmit="getValue()" AUTOCOMPLETE="OFF">
+
+    <div id="keypad" style="width:1000px;border:1px solid Black;float:right">
+<p>Virtual Keyboard</p>
+        <div id="row1">
+            <input type="button" name="number" value="+" id="_1" class="btns">
+            <input type="button" name="number" value="-" id="_2" class="btns">
+            <input type="button" name="number" value="~" id="_3" class="btns">
+            <input type="button" name="number" value="*" id="_10" class="btns">
+            <input type="button" name="number" value="," id="_11" class="btns">
+        </div>
+        <div id="row2">
+            <input type="button" name="number" value="a" id="_4" class="btns">
+            <input type="button" name="number" value="b" id="_5" class="btns">
+            <input type="button" name="number" value="6" id="_6" class="btns">
+        </div>
+        <div id="row3">
+            <input type="button" name="number" value="7" id="_7" class="btns">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+            <input type="button" name="number" value="8" id="_8" class="btns">
+            <input type="button" name="number" value="9" id="_9" class="btns">
+        </div>
+        <div id="row4">
+            <input type="button" name="number" value="." id="_dot" class="btns">
+            <input type="button" name="number" value="0" id="_0" class="btns">
+            <input type="button" name="number" value="back" id="_12" class="btns">
+            <input type="button" name="number" value="caps" id="_13" class="btns">
+            <input type="button" name="number" value="clear" id="_14" class="btns">
+        </div>
+    </div>
+</form>
+</body>
+</html>
