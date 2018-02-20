@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction to Computer Science</title>
+</head>
+<body>
+<header>
+    Introduction to Computer Science
+</header>
+<p>
+    CSC 205 Spring 2006 at <a href="#">Berea College</a><br/>
+    Instructor:<a href="#">Jan Pearce</a><br/>
+    Teaching Assistant:Jonathan Hunt
+</p>
+<table border="1">
+    <tr>
+        <td>
+            <a href="#">Main CSC205 Page</a>
+        </td>
+        <td>
+            <a href="#">CSC205 Syllabus</a>
+        </td>
+        <td>
+            <a href="#">BereaMath/CS Home Page</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
