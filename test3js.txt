@@ -1,0 +1,103 @@
+onload=function(){ attachHandlers(); }
+function attachHandlers(){
+    document.getElementById('_29').value = '"';
+    var the_nums = document.getElementsByName("number");
+    for (var i=0; i < the_nums.length; i++) {
+        the_nums[i].onclick=inputNumbers; }
+}
+function inputNumbers() {
+    var the_field = document.getElementById('calcfield');
+    var the_value = this.value;
+
+    switch (the_value) {
+
+        case 'Bksp':
+
+            var value = document.getElementById("calcfield1").value;
+            document.getElementById("calcfield1").value = value.substr(0, value.length - 1);
+            break;
+        case 'Caps':
+            var value = document.getElementById("_a").value;
+            if(value!='A') {
+                document.getElementById('_a').value = 'A';
+                document.getElementById('_b').value = 'B';
+                document.getElementById('_c').value = 'C';
+                document.getElementById('_d').value = 'D';
+                document.getElementById('_e').value = 'E';
+                document.getElementById('_f').value = 'F';
+                document.getElementById('_g').value = 'G';
+                document.getElementById('_h').value = 'H';
+                document.getElementById('_i').value = 'I';
+                document.getElementById('_j').value = 'J';
+                document.getElementById('_k').value = 'K';
+                document.getElementById('_l').value = 'L';
+                document.getElementById('_m').value = 'M';
+                document.getElementById('_n').value = 'N';
+                document.getElementById('_o').value = 'O';
+                document.getElementById('_p').value = 'P';
+                document.getElementById('_q').value = 'Q';
+                document.getElementById('_r').value = 'R';
+                document.getElementById('_s').value = 'S';
+                document.getElementById('_t').value = 'T';
+                document.getElementById('_u').value = 'U';
+                document.getElementById('_v').value = 'V';
+                document.getElementById('_w').value = 'W';
+                document.getElementById('_x').value = 'X';
+                document.getElementById('_y').value = 'Y';
+                document.getElementById('_Z').value = 'Z';
+            }else{
+                document.getElementById('_a').value = 'a';
+                document.getElementById('_b').value = 'b';
+                document.getElementById('_c').value = 'c';
+                document.getElementById('_d').value = 'd';
+                document.getElementById('_e').value = 'e';
+                document.getElementById('_f').value = 'f';
+                document.getElementById('_g').value = 'g';
+                document.getElementById('_h').value = 'h';
+                document.getElementById('_i').value = 'i';
+                document.getElementById('_j').value = 'j';
+                document.getElementById('_k').value = 'k';
+                document.getElementById('_l').value = 'l';
+                document.getElementById('_m').value = 'm';
+                document.getElementById('_n').value = 'n';
+                document.getElementById('_o').value = 'o';
+                document.getElementById('_p').value = 'p';
+                document.getElementById('_q').value = 'q';
+                document.getElementById('_r').value = 'r';
+                document.getElementById('_s').value = 's';
+                document.getElementById('_t').value = 't';
+                document.getElementById('_u').value = 'u';
+                document.getElementById('_v').value = 'v';
+                document.getElementById('_w').value = 'w';
+                document.getElementById('_x').value = 'x';
+                document.getElementById('_y').value = 'y';
+                document.getElementById('_Z').value = 'z';
+            }
+            break;
+        case 'clear|X':
+
+            var value = document.getElementById("calcfield1").value;
+            document.getElementById("calcfield1").value = value.substr(0,0);
+            break;
+        default : document.getElementById("calcfield1").value += the_value;
+            break;
+    }
+    document.getElementById('calcfield1').focus();
+    return true;
+}
+function getValue() {
+    document.getElementById('calcfield').focus();
+    return false;
+}
+
+function myFunction()
+{
+    document.onkeydown = function ()
+    {
+        return false;
+    }
+}
+function back() {
+    var value = document.getElementById("calcfield1").value;
+    document.getElementById("calcfield1").value = value.substr(0, value.length - 1);
+}
